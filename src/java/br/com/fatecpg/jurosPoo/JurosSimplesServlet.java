@@ -42,6 +42,34 @@ public class JurosSimplesServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Teste</h1>");
             out.println("<h2>Juros Simples</h2>");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
+            double capital = Double.parseDouble(request.getParameter("capital"));
+           
+            /* Pegando os valores para efetuar o calculo do juros simples  */
+            double taxa = Double.parseDouble(request.getParameter("taxa"));
+            double tempo = Double.parseDouble(request.getParameter("tempo"));
+            
+            /*Calculo do juros*/
+            double juros = capital*taxa*tempo;
+
+            
+            
+            
             out.println("</body>");
             out.println("</html>");
         }
