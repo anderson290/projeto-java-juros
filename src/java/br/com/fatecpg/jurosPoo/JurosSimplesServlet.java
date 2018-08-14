@@ -40,7 +40,8 @@ public class JurosSimplesServlet extends HttpServlet {
             out.println("<title>Servlet JurosSimplesServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet JurosSimplesServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Teste</h1>");
+            out.println("<h2>Juros Simples</h2>");
             out.println("</body>");
             out.println("</html>");
         }
