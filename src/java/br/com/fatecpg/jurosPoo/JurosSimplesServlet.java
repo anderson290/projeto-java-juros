@@ -41,7 +41,7 @@ public class JurosSimplesServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h2>Juros Simples</h2>");
-            out.println("<label for=\"nomeL\">Taxa:</label>\n");
+            out.println("<label for=\"taxa\">Taxa:</label>\n");
             out.println("<input type=\"number\" name=\"taxa\" class=\"form-control\">\n");
             out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
             
