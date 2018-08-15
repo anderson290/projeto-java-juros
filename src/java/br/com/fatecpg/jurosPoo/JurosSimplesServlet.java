@@ -37,10 +37,14 @@ public class JurosSimplesServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet JurosSimplesServlet</title>");            
+            out.println("<title>Projeto 01</title>");            
+            out.println("<meta charset='UTF-8'>");            
+            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
+            out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
+            out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");            
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h2>Juros Simples</h2>");
+            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;\">");
+            out.println("<h2>Juros Compostos</h2>");
             out.println("<label for=\"taxa\">Taxa:</label>\n");
             out.println("<input type=\"number\" name=\"taxa\" class=\"form-control\">\n");
             out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
@@ -54,6 +58,14 @@ public class JurosSimplesServlet extends HttpServlet {
             /*Calculando o juros*/
             double juros = capital*taxa*tempo;
             
+            
+            out.println("</div>");
+            out.println("<div class=\"col-md-6\">");
+             out.println("<h2>Resultado da Operação</h2><br><br>");
+            out.println("<h2 style=\"padding-bottom:8px;\">Juros Simples: "+juros+"</h2>");
+            out.println("</div>");
+            out.println("</div>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         

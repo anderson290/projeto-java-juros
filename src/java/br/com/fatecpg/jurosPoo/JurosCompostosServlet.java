@@ -34,13 +34,16 @@ public class JurosCompostosServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
+           out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet JurosCompostosServlet</title>");            
+            out.println("<title>Projeto 01</title>");            
+            out.println("<meta charset='UTF-8'>");            
+            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
+            out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
+            out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");            
             out.println("</head>");
-            out.println("<body>");
-                
+            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;\">");
             out.println("<h2>Juros Compostos</h2>");
             out.println("<div class=\"form\">");
             out.println("<form>\n" +

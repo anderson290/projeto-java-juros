@@ -37,10 +37,14 @@ public class HomeServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HomeServlet</title>");            
+            out.println("<title>Projeto 01</title>");            
+            out.println("<meta charset='UTF-8'>");            
+            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
+            out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
+            out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");          
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet HomeServlet at " + request.getContextPath() + "</h1>");
+            
             out.println("</body>");
             out.println("</html>");
         }
