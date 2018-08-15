@@ -30,11 +30,11 @@ public class JurosCompostosServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-           out.println("<!DOCTYPE html>");
+            out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Projeto 01</title>");            
@@ -43,7 +43,9 @@ public class JurosCompostosServlet extends HttpServlet {
             out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
             out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");            
             out.println("</head>");
-            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;\">");
+            
+            out.println("<body style=\"background:#4169e1;text-align:center;color:white;font-family:verdana;\">");
+            
             out.println("<h2>Juros Compostos</h2>");
             out.println("<div class=\"form\">");
             out.println("<form>\n" +

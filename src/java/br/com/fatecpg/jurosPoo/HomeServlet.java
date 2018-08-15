@@ -30,7 +30,7 @@ public class HomeServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
         try (PrintWriter out = response.getWriter()) {
@@ -44,7 +44,9 @@ public class HomeServlet extends HttpServlet {
             out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
             out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");          
             out.println("</head>");
-            out.println("<body style=\"background:#1b6d85;text-align:center;\">");
+            
+            out.println("<body style=\"background:#4169e1;text-align:center;color:white;font-family:verdana;\">");
+            
             out.println("<h2 style=\"color:white;\">Escolha a opção de Cálculo</h2>");
             out.println("<a href=\"juros-simples\" class=\"btn botao-form\">Juros Simples</a>");            
             out.println("<a href=\"juros-compostos\" name=\"btnCalculaS\" class=\"btn botao-form\">Juros Composto</a>");
