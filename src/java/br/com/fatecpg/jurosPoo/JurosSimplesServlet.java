@@ -40,38 +40,23 @@ public class JurosSimplesServlet extends HttpServlet {
             out.println("<title>Servlet JurosSimplesServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Teste</h1>");
             out.println("<h2>Juros Simples</h2>");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            out.println("<label for=\"nomeL\">Taxa:</label>\n");
+            out.println("<input type=\"number\" name=\"taxa\" class=\"form-control\">\n");
             out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
+            
+            /* Pegando o valor do capital a ser investido */
             double capital = Double.parseDouble(request.getParameter("capital"));
-           
-            /* Pegando os valores para efetuar o calculo do juros simples  */
+            /* Pegando o valor da taxa de juros */
             double taxa = Double.parseDouble(request.getParameter("taxa"));
+            /* Pegando o valor tempo */
             double tempo = Double.parseDouble(request.getParameter("tempo"));
-            
-            /*Calculo do juros*/
+            /*Calculando o juros*/
             double juros = capital*taxa*tempo;
-
-            
-            
             
             out.println("</body>");
             out.println("</html>");
+        
         }
     }
 
@@ -115,3 +100,18 @@ public class JurosSimplesServlet extends HttpServlet {
     }// </editor-fold>
 
 }
+           
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+            
+            
+         
