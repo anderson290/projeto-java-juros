@@ -32,21 +32,35 @@ public class HomeServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Projeto 01</title>");            
-            out.println("<meta charset='UTF-8'>");            
-            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
-            out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
-            out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");          
-            out.println("</head>");
-            out.println("<body>");
+        try (PrintWriter out = response.getWriter()) {  
+    
             
-            out.println("</body>");
-            out.println("</html>");
+            out.println("<!DOCTYPE html>");
+       out.println("<html>");
+            
+            out.println("<head>");
+             
+            out.println("<title>home</title>");  
+              out.println("<link href=\"estilo.css\" rel=\"stylesheet\">"); /* Tag link do tipo stylesheet que relaciona a um conteúdo externo de formatação. CSS */
+             out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">"); 
+            
+             out.println("</head>");
+             
+            out.println("<body style=\"background:#0099e6;text-align:center;\">");/*Definindo a cor da Página e o alinhamento*/
+              
+                out.println("<h1 style=\"color:black;\">Faculdade de Tecnologia de Praia Grande</h1>");
+                 out.println("<h2 style=\"color:Black;\">Programação Orientada a Objetos</h2>");
+                  out.println("<br><h2 style=\"color:Black;\"> Integrantes: </h2>");
+                   out.println("<h3 style=\"color:Black;\">Anderson Nunes<br>" + 
+                    "José Wandes <br> Thiago Sousa <br> Nicolas Almeida <br> Valéria Regina</p></h3>");
+                   out.println("<br><br><br><h2 style=\"color:black;\">Escolha uma das Opções de Juros.</h2><br>"); 
+                   out.println("<a href=\"juros-simples\" class=\"btn botao-form\">Juros Simples</a>"); /* Essa Tag de href, indica uma ação. Que linka o Servlet home
+                   ao Servlet de juros-simples acrescentando uma barra ao endereço do localhost:8084/projetoJuros/juros-simples */
+               out.println("<a href=\"juros-compostos\" name=\"btnCalculaS\" class=\"btn botao-form\">Juros Compostos</a>");  
+               /* Essa Tag de href, indica uma ação. Que linka o Servlet home ao Servlet de juros-simples acrescentando
+               uma barra ao endereço do localhost:8084/projetoJuros/juros-composto */
+                         out.println("</body>");
+       out.println("</html>");
         }
     }
 
