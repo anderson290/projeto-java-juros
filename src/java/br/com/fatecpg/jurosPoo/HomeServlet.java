@@ -32,6 +32,7 @@ public class HomeServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -47,9 +48,16 @@ public class HomeServlet extends HttpServlet {
             out.println("<h2 style=\"color:white;\">Escolha a opção de Cálculo</h2>");
             out.println("<a href=\"juros-simples\" class=\"btn botao-form\">Juros Simples</a>");            
             out.println("<a href=\"juros-compostos\" name=\"btnCalculaS\" class=\"btn botao-form\">Juros Composto</a>");
-            
-            out.println("</body>");
-            out.println("</html>");
+
+              
+                out.println("<h1 style=\"color:white;\">Faculdade de Tecnologia de Praia Grande</h1>");
+                 out.println("<h2 style=\"color:white;\">Programação Orientada a Objetos</h2>");
+                  out.println("<br><h2 style=\"color:white;\"> Integrantes: </h2>");
+                   out.println("<h3 style=\"color:white;\">Anderson Nunes<br>" + 
+                    "José Wandes <br> Thiago Sousa <br> Nicolas Almeida <br> Valéria Regina</p></h3>");
+                               
+                   out.println("</body>");
+       out.println("</html>");
         }
     }
 
