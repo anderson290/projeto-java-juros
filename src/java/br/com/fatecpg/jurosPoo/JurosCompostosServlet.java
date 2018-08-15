@@ -40,7 +40,36 @@ public class JurosCompostosServlet extends HttpServlet {
             out.println("<title>Servlet JurosCompostosServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet JurosCompostosServlet at " + request.getContextPath() + "</h1>");
+                
+            out.println("<h2>Juros Compostos</h2>");
+            out.println("<div class=\"form\">");
+            out.println("<form>\n" +
+                    "<div class=\"col-md-6\">\n" +
+                    "<h3>Insira seus dados</h3>\n" +        
+                    "<div class=\"col-md-4\">\n" +                    
+                    "<div class=\"form-group\">\n" +
+                    "<label for=\"taxa  \">Taxa:</label>\n" +
+                    "<input type=\"text\" name=\"taxa\" class=\"form-control\">\n"+
+                    "</div></div>\n"+
+                    "<div class=\"col-md-4\">\n" +
+                    "<div class=\"form-group\">\n" +
+                    "<label for=\"capital\">Capital:</label>\n" +
+                    "<input type=\"number\" name=\"capital\" class=\"form-control\">\n"+
+                    "</div></div>\n"+
+                    "<div class=\"col-md-4\">\n" +
+                    "<div class=\"form-group\">\n" +
+                    "<label for=\"tempo\">Tempo:</label>\n" +
+                    "<input type=\"number\" name=\"tempo\" class=\"form-control\">\n"+
+                    "</div></div>\n"+
+                    "<input type=\"submit\" class=\"btn botao-form\" value=\"Calcular\">"
+                    
+            );
+            out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
+            
+            out.println("</div>");
+            out.println("</div>");
+            out.println("</div>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
