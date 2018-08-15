@@ -43,7 +43,10 @@ public class HomeServlet extends HttpServlet {
             out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
             out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");          
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body style=\"background:#1b6d85;text-align:center;\">");
+            out.println("<h2 style=\"color:white;\">Escolha a opção de Cálculo</h2>");
+            out.println("<a href=\"juros-simples\" class=\"btn botao-form\">Juros Simples</a>");            
+            out.println("<a href=\"juros-compostos\" name=\"btnCalculaS\" class=\"btn botao-form\">Juros Composto</a>");
             
             out.println("</body>");
             out.println("</html>");
