@@ -44,7 +44,9 @@ public class JurosCompostosServlet extends HttpServlet {
             out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
             out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");            
             out.println("</head>");
-            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;\">");
+            
+            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;font-family:verdana;\">");
+            
             out.println("<h2>Juros Compostos</h2>");
             out.println("<div class=\"form\">");
             out.println("<form>\n" +
