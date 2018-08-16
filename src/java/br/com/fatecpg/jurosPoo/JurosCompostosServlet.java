@@ -7,6 +7,7 @@ package br.com.fatecpg.jurosPoo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -79,7 +80,7 @@ public class JurosCompostosServlet extends HttpServlet {
                 out.println("</div>");
                 out.println("<div class=\"col-md-6\">");
                  out.println("<h2>Resultado da Operação</h2><br>");
-                //out.println("<h2 style=\"padding-bottom:8px;\">Montante: "+montante+"\nJuros:"+juros+"</h2>");
+               
                 out.println("<table class=\"table table-bordered table-condensed\">\n" +
                             "<thead>\n" +
                             "          <tr>\n" +
@@ -91,12 +92,15 @@ public class JurosCompostosServlet extends HttpServlet {
                             "          <tbody>\n");
                         
                             out.println("<tr>\n");
+                            DecimalFormat df = new DecimalFormat("#,##0.00");
+                            
                             for(int i=0; i<tempo;i++){
                              double montante = capital*Math.pow((1+taxa),i+1);
 
                              double juros = montante-capital;
-                            out.println("<td>"+montante+"</td>\n" +
-                            "              <td>"+juros+"</td>\n" +
+                             
+                            out.println("<td>"+df.format(montante)+"</td>\n" +
+                            "              <td>"+df.format(juros)+"</td>\n" +
                             "              <td>"+(i+1)+"</td>\n");
                             out.println("</tr>\n");
                             }
