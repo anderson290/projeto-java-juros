@@ -60,12 +60,12 @@ public class JurosCompostosServlet extends HttpServlet {
                     "<div class=\"col-md-4\">\n" +
                     "<div class=\"form-group\">\n" +
                     "<label for=\"capital\">Capital:</label>\n" +
-                    "<input type=\"number\" name=\"capital\" class=\"form-control\">\n"+
+                    "<input type=\"text\" name=\"capital\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<div class=\"col-md-4\">\n" +
                     "<div class=\"form-group\">\n" +
                     "<label for=\"tempo\">Tempo:</label>\n" +
-                    "<input type=\"number\" name=\"tempo\" class=\"form-control\">\n"+
+                    "<input type =\"text\" name=\"tempo\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<input type=\"submit\" class=\"btn botao-form\" value=\"Calcular\">"
                     
@@ -81,7 +81,7 @@ public class JurosCompostosServlet extends HttpServlet {
 
                 out.println("</div>");
                 out.println("<div class=\"col-md-6\">");
-                 out.println("<h2>Resultado da Operação</h2><br>");
+                out.println("<h2>Resultado da Operação</h2><br>");
                
                 out.println("<table class=\"table table-bordered table-condensed\">\n" +
                             "<thead>\n" +
@@ -97,13 +97,13 @@ public class JurosCompostosServlet extends HttpServlet {
                             DecimalFormat df = new DecimalFormat("#,##0.00");
                             
                             for(int i=0; i<tempo;i++){
-                             double montante = capital*Math.pow((1+taxa),i+1);
+                            double montante = capital*Math.pow((1+(taxa/100)),i+1);
 
-                             double juros = montante-capital;
+                            double juros = montante-capital;
                              
                             out.println("<td>"+df.format(montante)+"</td>\n" +
-                            "              <td>"+df.format(juros)+"</td>\n" +
-                            "              <td>"+(i+1)+"</td>\n");
+                            "            <td>"+df.format(juros)+"</td>\n" +
+                            "            <td>"+(i+1)+"</td>\n");
                             out.println("</tr>\n");
                             }
                            

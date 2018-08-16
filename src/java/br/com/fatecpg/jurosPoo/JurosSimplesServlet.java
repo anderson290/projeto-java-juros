@@ -46,7 +46,7 @@ public class JurosSimplesServlet extends HttpServlet {
             
             out.println("<body style=\"background:#1b6d85;text-align:center;color:white;font-family:verdana;\">");
             
-            out.println("<h2>Juros Compostos</h2>");
+            out.println("<h2>Juros Simples</h2>");
             out.println("<div class=\"form\">");
             out.println("<form>\n" +
                     "<div class=\"col-md-6\">\n" +
@@ -54,17 +54,17 @@ public class JurosSimplesServlet extends HttpServlet {
                     "<div class=\"col-md-4\">\n" +                    
                     "<div class=\"form-group\">\n" +
                     "<label for=\"nomeL\">Taxa:</label>\n" +
-                    "<input type=\"number\" name=\"taxa\" class=\"form-control\">\n"+
+                    "<input type=\"text\" name=\"taxa\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<div class=\"col-md-4\">\n" +
                     "<div class=\"form-group\">\n" +
                     "<label for=\"capital\">Capital:</label>\n" +
-                    "<input type=\"number\" name=\"capital\" class=\"form-control\">\n"+
+                    "<input type=\"text\" name=\"capital\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<div class=\"col-md-4\">\n" +
                     "<div class=\"form-group\">\n" +
                     "<label for=\"tempo\">Tempo:</label>\n" +
-                    "<input type=\"number\" name=\"tempo\" class=\"form-control\">\n"+
+                    "<input type=\"text\" name=\"tempo\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<input type=\"submit\" class=\"btn botao-form\" value=\"Calcular\">"
                     
@@ -78,11 +78,10 @@ public class JurosSimplesServlet extends HttpServlet {
             /* Pegando o valor tempo */
             double tempo = Double.parseDouble(request.getParameter("tempo"));
             /*Calculando o juros*/
-            double juros = capital*taxa*tempo;
+            double juros = capital*(taxa/100)*tempo;
             
             /*Montante*/
-            
-            double montante = capital*(1+(tempo*taxa));
+            double montante = capital*(1+(tempo*(taxa/100)));
             
             out.println("</div>");
             out.println("<div class=\"col-md-6\">");
