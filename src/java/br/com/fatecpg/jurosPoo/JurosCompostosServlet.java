@@ -43,9 +43,7 @@ public class JurosCompostosServlet extends HttpServlet {
             out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
             out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");            
             out.println("</head>");
-            
-            out.println("<body style=\"background:#4169e1;text-align:center;color:white;font-family:verdana;\">");
-            
+            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;\">");
             out.println("<h2>Juros Compostos</h2>");
             out.println("<div class=\"form\">");
             out.println("<form>\n" +
@@ -70,11 +68,52 @@ public class JurosCompostosServlet extends HttpServlet {
                     
             );
             out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
-            //programação do calculo aqui
+            double capital = Double.parseDouble(request.getParameter("capital"));
+            double taxa = Double.parseDouble(request.getParameter("taxa"));
+            double tempo = Double.parseDouble(request.getParameter("tempo"));
+            
+            
+               
+
+
+                out.println("</div>");
+                out.println("<div class=\"col-md-6\">");
+                 out.println("<h2>Resultado da Operação</h2><br>");
+                //out.println("<h2 style=\"padding-bottom:8px;\">Montante: "+montante+"\nJuros:"+juros+"</h2>");
+                out.println("<table class=\"table table-bordered table-condensed\">\n" +
+                            "<thead>\n" +
+                            "          <tr>\n" +
+                            "          <th>Montante</th>\n" +
+                            "          <th>Juros</th>\n" +
+                            "          <th>Tempo</th>\n" +
+                            "          </tr>\n" +
+                            "          </thead>\n" +
+                            "          <tbody>\n");
+                        
+                            out.println("<tr>\n");
+                            for(int i=0; i<tempo;i++){
+                             double montante = capital*Math.pow((1+taxa),i+1);
+
+                             double juros = montante-capital;
+                            out.println("<td>"+montante+"</td>\n" +
+                            "              <td>"+juros+"</td>\n" +
+                            "              <td>"+(i+1)+"</td>\n");
+                            out.println("</tr>\n");
+                            }
+                           
+
+                            out.println("</tbody>\n" +
+                            "      </table>");
+            
             out.println("</div>");
             out.println("</div>");
             out.println("</div>");
-            out.println("</div>");
+                      
+            
+                     
+            
+            
+            
             out.println("</body>");
             out.println("</html>");
         }
