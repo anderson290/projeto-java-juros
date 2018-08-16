@@ -70,6 +70,7 @@ public class JurosCompostosServlet extends HttpServlet {
                     "<input type=\"submit\" class=\"btn botao-form\" value=\"Calcular\">"
                     
             );
+            //declaração de variavel
             out.println("<a href=\"home\" name=\"btnVoltar\" class=\"btn botao-form\">Voltar</a>");
             double capital = Double.parseDouble(request.getParameter("capital"));
             double taxa = Double.parseDouble(request.getParameter("taxa"));
