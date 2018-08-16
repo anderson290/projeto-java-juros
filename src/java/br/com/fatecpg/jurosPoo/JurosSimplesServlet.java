@@ -80,11 +80,14 @@ public class JurosSimplesServlet extends HttpServlet {
             /*Calculando o juros*/
             double juros = capital*taxa*tempo;
             
+            /*Montante*/
+            
+            double montante = capital*(1+(tempo*taxa));
             
             out.println("</div>");
             out.println("<div class=\"col-md-6\">");
             out.println("<h2>Resultado da Operação</h2><br><br>");
-            out.println("<h2 style=\"padding-bottom:8px;\">Juros Simples: "+juros+"</h2>");
+            out.println("<h2 style=\"padding-bottom:8px;\">Juros: "+juros+" Montante:"+montante+"</h2>");
             out.println("</div>");
             out.println("</div>");
             out.println("</div>");
