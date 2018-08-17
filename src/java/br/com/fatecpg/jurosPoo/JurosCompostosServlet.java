@@ -54,7 +54,7 @@ public class JurosCompostosServlet extends HttpServlet {
                     "<h3>Insira seus dados</h3>\n" +        
                     "<div class=\"col-md-4\">\n" +                    
                     "<div class=\"form-group\">\n" +
-                    "<label for=\"taxa  \">Taxa:</label>\n" +
+                    "<label for=\"taxa  \">Taxa (%):</label>\n" +
                     "<input type=\"text\" name=\"taxa\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<div class=\"col-md-4\">\n" +
@@ -100,7 +100,7 @@ public class JurosCompostosServlet extends HttpServlet {
                             for(int i=0; i<tempo;i++){
                             double montante = capital*Math.pow((1+(taxa/100)),i+1);
 
-                            double juros = montante*0.01;
+                            double juros = montante*(taxa/100);
                              
                             out.println("<td>"+df.format(montante)+"</td>\n" +
                             "            <td>"+df.format(juros)+"</td>\n" +

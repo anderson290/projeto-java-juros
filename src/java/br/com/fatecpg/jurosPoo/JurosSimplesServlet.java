@@ -53,7 +53,7 @@ public class JurosSimplesServlet extends HttpServlet {
                     "<h3>Insira seus dados</h3>\n" +        
                     "<div class=\"col-md-4\">\n" +                    
                     "<div class=\"form-group\">\n" +
-                    "<label for=\"nomeL\">Taxa:</label>\n" +
+                    "<label for=\"nomeL\">Taxa (%):</label>\n" +
                     "<input type=\"text\" name=\"taxa\" class=\"form-control\">\n"+
                     "</div></div>\n"+
                     "<div class=\"col-md-4\">\n" +
