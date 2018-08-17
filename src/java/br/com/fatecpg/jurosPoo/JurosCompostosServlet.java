@@ -100,7 +100,7 @@ public class JurosCompostosServlet extends HttpServlet {
                             for(int i=0; i<tempo;i++){
                             double montante = capital*Math.pow((1+(taxa/100)),i+1);
 
-                            double juros = montante-capital;
+                            double juros = montante*0.01;
                              
                             out.println("<td>"+df.format(montante)+"</td>\n" +
                             "            <td>"+df.format(juros)+"</td>\n" +
@@ -112,8 +112,8 @@ public class JurosCompostosServlet extends HttpServlet {
                             out.println("</tbody>\n" +
                             "      </table>");
             
-            out.println("</div>");
-            out.println("</div>");
+                    out.println("</div>");
+                out.println("</div>");
             out.println("</div>");
                       
             
