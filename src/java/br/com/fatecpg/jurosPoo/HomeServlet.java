@@ -36,27 +36,27 @@ public class HomeServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>home</title>");            
-            out.println("<meta charset='UTF-8'>");            
-            out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
-            out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
-            out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");          
-            out.println("</head>");
+                out.println("<html>");
+                    out.println("<head>");
+                        out.println("<title>home</title>");            
+                        out.println("<meta charset='UTF-8'>");            
+                        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
+                        out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
+                        out.println("<link href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">");          
+                    out.println("</head>");
             
-            out.println("<body style=\"background:#1b6d85;text-align:center;color:white;font-family:verdana;\">");
+                    out.println("<body style=\"background:#1b6d85;text-align:center;color:white;font-family:verdana;\">");
             
-                out.println("<h1 style=\"color:white;\">Faculdade de Tecnologia de Praia Grande</h1>");
-                 out.println("<h2 style=\"color:white;\">Programação Orientada a Objetos</h2>");
-                  out.println("<br><h2 style=\"color:white;\"> Integrantes: </h2>");
-                   out.println("<h3 style=\"color:white;\">Anderson Nunes<br>" + 
-                    "José Wandes <br> Thiago Sousa <br> Nicolas Almeida <br> Valéria Regina</p></h3>");
-                     out.println("<br><h2 style=\"color:white;\">Escolha a opção de Cálculo</h2>");
-            out.println("<a href=\"juros-simples\" class=\"btn botao-form\">Juros Simples</a>");            
-            out.println("<a href=\"juros-compostos\" name=\"btnCalculaS\" class=\"btn botao-form\">Juros Composto</a>");          
-                   out.println("</body>");
-       out.println("</html>");
+                        out.println("<h1 style=\"color:white;\">Faculdade de Tecnologia de Praia Grande</h1>");
+                        out.println("<h2 style=\"color:white;\">Programação Orientada a Objetos</h2>");
+                        out.println("<br><h2 style=\"color:white;\"> Integrantes: </h2>");
+                        out.println("<h3 style=\"color:white;\">Anderson Nunes<br>" + 
+                        "José Wandes <br> Thiago Sousa <br> Nicolas Almeida <br> Valéria Regina</p></h3>");
+                        out.println("<br><h2 style=\"color:white;\">Escolha a opção de Cálculo</h2>");
+                        out.println("<a href=\"juros-simples\" class=\"btn botao-form\">Juros Simples</a>");            
+                        out.println("<a href=\"juros-compostos\" name=\"btnCalculaS\" class=\"btn botao-form\">Juros Composto</a>");          
+                    out.println("</body>");
+                out.println("</html>");
         }
     }
 
