@@ -38,7 +38,7 @@ public class JurosCompostosServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
                     out.println("<html>");
                         out.println("<head>");
-                            out.println("<title>Projeto 01</title>");            
+                            out.println("<title>Juros Compostos</title>");            
                             out.println("<meta charset='UTF-8'>");            
                             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");            
                             out.println("<link href=\"estilo.css\" rel=\"stylesheet\">");            
